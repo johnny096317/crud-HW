@@ -31,7 +31,7 @@ $result = mysqli_query($conn, $sql_query);
         while($row_result = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>".$row_result['id']."</td>";
-            echo "<td><a href='search.php?id=".$row_result['id']."'>$row_result[name]</a></td>";
+            echo "<td><a href='search.php?id=".$row_result['id']."'>$row_result['name']</a></td>";
             echo "<td>".$row_result['phone']."</td>";
             echo "<td><a href='update.php?id=".$row_result['id']."'>更新</a></td>";
             echo "<td><form method='get'><input type='hidden' name='action' value='".$row_result['id']."'><input type='submit' name='button' value='刪除'></form></td>";
